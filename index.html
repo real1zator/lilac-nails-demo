@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf5f2">
+  <meta name="description" content="ЛИЛА — студия маникюра и педикюра. Выберите покрытие, посмотрите работы и оставьте заявку на визит.">
+  <link rel="icon" href="data:,">
+  <title>ЛИЛА — студия маникюра</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+  <script defer src="assets/gsap.min.js"></script>
+  <script defer src="assets/ScrollTrigger.min.js"></script>
+  <script defer src="catalog.js"></script>
+  <script defer src="shared.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="admin-layout.js"></script>
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <a class="skip" href="#content">К содержанию</a>
+  <header class="header wrap">
+    <a class="wordmark" href="#top" aria-label="ЛИЛА — главная"><span class="mark" aria-hidden="true">✦</span><strong>лила.</strong><span class="wordmark-category">студия<br>маникюра</span></a>
+    <nav aria-label="Навигация"><a href="#services">Услуги</a><a href="#looks">Работы</a><a href="#studio">Студия</a><button type="button" class="nav-button" data-history>Мои заявки</button></nav>
+    <button class="pill primary" data-book>Записаться <span aria-hidden="true">↗</span></button>
+  </header>
+  <main id="content">
+    <section class="hero wrap" aria-labelledby="headline">
+      <div class="hero-copy">
+        <p class="eyebrow hero-label"><span class="dot"></span> Калининград · nail studio</p>
+        <h1 id="headline"><span>Маникюр</span><br><span>в своём</span><br><em>цвете.</em></h1>
+        <p class="hero-description">От прозрачного нюда до вишнёвого френча. Выберите дизайн, который хочется носить каждый день.</p>
+        <div class="hero-actions"><button class="pill primary" data-book>Выбрать время <span aria-hidden="true">↗</span></button><a class="text-link" href="#looks">Смотреть работы <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/hero.webp" alt="Нежно-розовый маникюр с тонким вишнёвым френчем на лиловой ткани" fetchpriority="high" width="1536" height="1024">
+        <figcaption class="hero-caption"><span class="swatch-petal" aria-hidden="true"></span><span><small>Дизайн на обложке</small><b>Вишнёвый френч</b></span><button class="round" data-book="french" data-look="cherry" aria-label="Записаться на вишнёвый френч">↗</button></figcaption>
+      </figure>
+    </section>
+    <div class="ribbon">
+      <div class="wrap ribbon-content"><span>Маникюр и педикюр</span><span aria-hidden="true">✦</span><span>Стерильные инструменты</span><span aria-hidden="true">✦</span><span>Дизайн по референсу</span></div>
+    </div>
+    <section class="section wrap" id="services" aria-labelledby="services-title">
+      <div class="section-head" data-reveal><div><p class="eyebrow">Меню студии</p><h2 id="services-title">Что выберем <em>сегодня?</em></h2></div><p>Найдите услугу и сразу добавьте её в заявку.</p></div>
+      <div class="service-grid" id="service-cards"></div>
+    </section>
+    <section class="section wrap studio" id="studio" data-reveal>
+      <div class="studio-photo atlas atlas-tl" role="img" aria-label="Молочный маникюр на светлом льне"></div>
+      <div class="studio-copy"><p class="eyebrow">О студии</p><h2>Время <em>для себя.</em></h2><p>В «Лиле» можно выбрать оттенок на месте, принести свой референс или попросить мастера помочь с дизайном. На визите уточним форму, длину и покрытие.</p><a class="text-link" href="#contacts">Как к нам прийти <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="palette-section" id="palette">
+      <div class="wrap palette">
+        <div class="palette-copy" data-reveal><p class="eyebrow">Палитра</p><h2>Цвет, который <em>ваш.</em></h2><p>Нажмите на оттенок, чтобы увидеть его на ногтях.</p><div id="swatches" class="swatches" aria-label="Выбор оттенка"></div><div class="palette-meta" aria-live="polite"><h3 id="palette-name"></h3><p id="palette-note"></p></div><button id="palette-book" class="pill primary" data-book>Записаться с этим дизайном <span aria-hidden="true">↗</span></button></div>
+        <figure class="palette-photo atlas atlas-tl" id="palette-photo" role="img" aria-label="Молочная вуаль"></figure>
+      </div>
+    </section>
+    <section class="section wrap price-section" id="price" aria-labelledby="price-title">
+      <div class="section-head" data-reveal><div><p class="eyebrow">Услуги и цены</p><h2 id="price-title">Прайс <em>студии.</em></h2></div></div>
+      <div class="price-layout"><div><div class="chips" id="price-filters" aria-label="Категории услуг"></div><div id="price-list" class="price-list"></div></div><div class="price-photo atlas atlas-bl" role="img" aria-label="Вишнёвый френч крупным планом"></div></div>
+    </section>
+    <section class="section wrap" id="looks" aria-labelledby="looks-title">
+      <div class="section-head" data-reveal><div><p class="eyebrow">Портфолио</p><h2 id="looks-title">Сохраните <em>идею.</em></h2></div><div class="chips" id="gallery-filters" aria-label="Категории работ"></div></div>
+      <div class="looks-grid" id="looks-grid"></div>
+    </section>
+    <section class="section wrap notes" aria-labelledby="notes-title">
+      <div class="section-head" data-reveal><div><p class="eyebrow">Заметки мастера</p><h2 id="notes-title">Детали <em>решают.</em></h2></div></div>
+      <div class="notes-grid">
+        <details class="note" data-reveal><summary><span class="note-photo atlas atlas-tl"></span><span class="note-title">Нюд с характером <span aria-hidden="true">+</span></span></summary><p>Чтобы нюд смотрелся естественно, приложите образец покрытия к руке при дневном свете. Для мягкого эффекта попробуйте полупрозрачную базу, для более плотного — молочный или пыльно-розовый оттенок.</p></details>
+        <details class="note" data-reveal><summary><span class="note-photo atlas atlas-tr"></span><span class="note-title">Как носить тёмный лак <span aria-hidden="true">+</span></span></summary><p>Глубокая слива и вишня выразительно смотрятся даже на коротких ногтях. Если хочется оставить больше естественного цвета, попробуйте тонкий френч или один тёмный акцент.</p></details>
+      </div>
+    </section>
+    <section class="visit-banner" aria-labelledby="visit-title">
+      <div class="visit-backdrop" aria-hidden="true"><div class="atlas atlas-tr"></div><div class="atlas atlas-bl"></div><div class="atlas atlas-br"></div></div>
+      <div class="visit-message" data-reveal><h2 id="visit-title">Есть идея <em>для дизайна?</em></h2><p>Опишите её в заявке и покажите референс мастеру перед визитом.</p><button class="pill primary" data-book="art">Записаться на дизайн ↗</button></div>
+    </section>
+    <section class="section wrap guide" data-reveal>
+      <div><p class="eyebrow">Перед визитом</p><h2>Полезно <em>знать.</em></h2></div>
+      <div class="guide-list">
+        <details><summary>Как выбрать услугу?</summary><p>Для однотонного покрытия выберите «Маникюр с покрытием». Если хотите френч, рисунок или сложный дизайн, отметьте нужную услугу или выберите работу из галереи.</p></details>
+        <details><summary>Нужно ли заранее снимать покрытие?</summary><p>Добавьте комментарий о текущем покрытии к заявке. Студия уточнит, потребуется ли снятие и сколько времени заложить.</p></details>
+        <details><summary>Когда запись будет подтверждена?</summary><p>После заявки администратор свяжется с вами и согласует время. До этого указанное время считается пожеланием.</p></details>
+      </div>
+    </section>
+    <section class="contact-section" id="contacts">
+      <div class="wrap contact-layout"><div><p class="eyebrow">Контакты</p><h2>Увидимся <em>в Лиле.</em></h2><p id="studio-city"></p><p id="studio-hours"></p><p id="studio-address"></p><div id="studio-links" class="studio-links"></div><button class="pill primary" data-book>Оставить заявку <span aria-hidden="true">↗</span></button></div><div class="contact-photo atlas atlas-br" role="img" aria-label="Жемчужный маникюр на лиловой ткани"></div></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><a class="wordmark" href="#top"><span class="mark" aria-hidden="true">✦</span><strong>лила.</strong></a><span id="preview-label" hidden>Демонстрационная студия</span><a href="admin.html">Кабинет студии ↗</a></footer>
+  <nav class="mobile-nav" aria-label="Быстрые действия"><a href="#services">Услуги</a><a href="#looks">Работы</a><button type="button" class="nav-button" data-history>Мои заявки</button><button type="button" class="pill primary" data-book>Записаться ↗</button></nav>
+  <dialog id="booking" aria-labelledby="booking-title"><div class="dialog-frame"><div class="dialog-top"><span class="eyebrow">Лила · запись</span><button type="button" class="round" data-close="booking" aria-label="Закрыть запись">×</button></div><div id="booking-content"></div></div></dialog>
+  <dialog id="look-dialog" aria-label="Работа студии"><div class="dialog-frame look-frame"><button type="button" class="round look-close" data-close="look-dialog" aria-label="Закрыть работу">×</button><div id="look-detail"></div></div></dialog>
+  <dialog id="history-dialog" aria-labelledby="history-title"><div class="dialog-frame"><div class="dialog-top"><span class="eyebrow">Лила · запись</span><button type="button" class="round" data-close="history-dialog" aria-label="Закрыть мои заявки">×</button></div><h2 id="history-title">Мои заявки</h2><p id="history-note">Заявки из этого браузера.</p><div id="history-items" class="price-list" aria-live="polite"></div></div></dialog>
+</body>
+</html>

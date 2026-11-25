@@ -1,0 +1,35 @@
+.admin-page { background: var(--paper); }
+.admin-top { display: flex; justify-content: space-between; align-items: center; min-height: 74px; border-bottom: 1px solid var(--line); }
+.admin-main { padding-top: 37px; padding-bottom: 48px; }
+.admin-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.admin-heading h1 { font-size: clamp(44px, 6vw, 89px); line-height: .96; margin: 8px 0 17px; }
+.admin-heading .pill { margin-bottom: 15px; }
+.demo-info { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+.admin-nav { margin-block: 4px 11px; }
+.admin-status { min-height: 24px; color: var(--berry); font-size: 13px; overflow-wrap: anywhere; }
+.admin-panel { background: var(--cream); padding: clamp(14px, 3vw, 35px); border: 1px solid var(--line); border-radius: 6px 32px 6px 6px; }
+.admin-panel h2 { font-size: clamp(38px, 5vw, 64px); margin-top: 0; }
+.admin-login { max-width: 470px; }
+.admin-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 15px; }
+.admin-head h2 { margin: 0; }
+.admin-tools, .admin-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.admin-tools .field { margin: 0; }
+.admin-tools { margin-bottom: 13px; }
+.admin-row { padding-block: 12px; border-top: 1px solid var(--line); display: grid; align-items: center; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+.admin-row h3 { font-size: 16px; }
+.admin-row p { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.admin-row .pill { min-height: 38px; padding: 6px 12px; font-size: 12px; }
+.admin-row .atlas { flex: 0 0 57px; width: 57px; height: 57px; border-radius: 8px; }
+.entry-main { display: flex; align-items: center; gap: 9px; }
+.entry-main > div { min-width: 0; }
+.admin-form { max-width: 610px; }
+.admin-form select { min-width: 136px; }
+.admin-destructive { color: #962e46; }
+.stack { display: grid; gap: 5px; }
+.admin-actions select { max-width: 100%; color: var(--ink); background: white; border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; min-height: 40px; }
+.booking-notification { color: var(--berry) !important; }
+@media (max-width: 550px) {
+  .admin-row { grid-template-columns: 1fr; }
+  .admin-heading { align-items: center; }
+  .admin-heading .pill { margin: 0; }
+}
